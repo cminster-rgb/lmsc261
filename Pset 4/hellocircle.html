@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+    <canvas width="600" height="600" id="canvas" style="width: 600px; height: 600px;"></canvas>
+</body>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const w = canvas.width, h = canvas.height;
+
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width *= dpr, canvas.height *= dpr;
+    ctx.scale(dpr, dpr);
+
+    ctx.beginPath(); ctx.arc( xPos,
+        yPos, 
+        20, 
+        0, 
+        Math.PI * 2,  
+        false); 
+        ctx.fillStyle = "blue"; // color of circle ctx.fill(); // render the circle
+
+</script>
