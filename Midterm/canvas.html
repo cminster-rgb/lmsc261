@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<body>
+    <canvas width="600" height="600" id="canvas" style="width: 600px; height: 600px;"></canvas>
+</body>
+
+<script>
+    
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const w = canvas.width, h = canvas.height;
+
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width *= dpr, canvas.height *= dpr;
+    ctx.scale(dpr, dpr);
+
+   ctx.beginPath();
+ctx.arc(
+	300, // x-position coordinate
+	300, // y-position coordinate
+	300, // radius of circle
+	0, // starting angle
+	Math.PI * 2, // ending angle
+	false // clockwise or not 
+);
+ctx.fillStyle = "yellow"; // color of circle
+ctx.fill(); // render the circle
+
+ ctx.beginPath();
+ctx.arc(
+	200, // x-position coordinate
+	200, // y-position coordinate
+	50, // radius of circle
+	0, // starting angle
+	Math.PI * 2, // ending angle
+	false // clockwise or not 
+);
+ctx.fillStyle = "black"; // color of circle
+ctx.fill(); // render the circle
+
+ctx.beginPath();
+ctx.arc(
+    600, // x-position coordinate
+    300, // y-position coordinate
+    250, // radius of circle
+    0, // starting angle
+    Math.PI * 2, // ending angle
+    false // clockwise or not
+);
+ctx.fillStyle = "white";
+ctx.fill(); 
+
+</script>
